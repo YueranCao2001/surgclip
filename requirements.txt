@@ -1,0 +1,16 @@
+torch==2.1.2
+torchvision==0.16.2
+torchaudio==2.1.2
+
+open-clip-torch==2.24.0
+
+numpy==1.26.4
+pandas==2.2.1
+matplotlib==3.8.3
+tqdm==4.66.2
+Pillow==10.2.0
+
+opencv-python==4.9.0.80
+ffmpeg-python==0.2.0
+
+scikit-learn==1.4.0
