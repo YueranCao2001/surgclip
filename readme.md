@@ -5,6 +5,41 @@
 # SurgClip: Domain-Adaptive CLIP for Surgical Video Keyframe–Text Retrieval
 ## with INT8 Inference Acceleration, PQ Compression, and Reliability Analysis
 
+<p align="left">
+
+<!-- Python version -->
+<a href="https://www.python.org/">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python">
+</a>
+
+<!-- PyTorch -->
+<a href="https://pytorch.org/">
+  <img src="https://img.shields.io/badge/PyTorch-2.1.2-red.svg" alt="PyTorch">
+</a>
+
+<!-- OpenCLIP -->
+<a href="https://github.com/mlfoundations/open_clip">
+  <img src="https://img.shields.io/badge/OpenCLIP-2.24.0-orange.svg" alt="OpenCLIP">
+</a>
+
+<!-- License -->
+<a href="https://github.com/YueranCao2001/surgclip/blob/main/LICENSE">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
+</a>
+
+<!-- Release -->
+<a href="https://github.com/YueranCao2001/surgclip/releases">
+  <img src="https://img.shields.io/badge/Release-v1.0.0-brightgreen.svg" alt="Release">
+</a>
+
+<!-- Stars -->
+<a href="https://github.com/YueranCao2001/surgclip/stargazers">
+  <img src="https://img.shields.io/github/stars/YueranCao2001/surgclip.svg?style=social" alt="GitHub Stars">
+</a>
+
+</p>
+
+
 # Table of Contents
 - [Introduction](introduction)
 - [Model Architecture](model-architecture)
