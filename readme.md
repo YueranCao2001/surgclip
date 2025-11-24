@@ -89,121 +89,70 @@ Add to PATH: ```C:\ffmpeg\bin```
 
 ### 1.5 Clone and install dependencies
 
-```git clone https://github.com/YueranCao2001/surgclip.git```
-
-```cd surgclip```
-
-```pip install -r requirements.txt```
+```
+git clone https://github.com/YueranCao2001/surgclip.git
+cd surgclip
+pip install -r requirements.txt
+```
 
 # 2. Project Structure
 
-```surgclip/```
-
-```│```
-
-```├── data/```
-
-```│   └── cholec80/```
-
-```│       ├── videos/```                 # Cholec80 MP4 files
-
-```│       ├── phase_annotations/```      # Phase annotation txt files
-
-```│       └── README.txt```              # Official dataset description
-
-```│```
-
-```├── frames/```
-
-```│   └── videoXX/frame_XXXXX.jpg```     # Extracted frames
-
-```│```
-
-```├── index/```
-
-```│   └── keyframe_index.csv```          # Sampled keyframes for retrieval
-
-```│```
-
-```├── results/```
-
-```│   ├── retrieval_scores*.json```
-
-```│   ├── retrieval_examples*.json```
-
-```│   ├── phase_wise_accuracy.csv```
-
-```│   ├── overall_accuracy_summary.csv```
-
-```│   ├── reliability_summary.csv```
-
-```│   │```
-
-```│   ├── figures/```                    # Retrieval visualizations
-
-```│   ├── figures_phase/```              # Per-phase performance
-
-```│   ├── figures_int8/```               # Quantization evaluation
-
-```│   ├── figures_pq/```                 # PQ compression analysis
-
-```│   └── figures_reliability/```        # Robustness under shift
-
-```│```
-
-```└── scripts/```                        # Full pipeline
-
-```│    ├── extract_frames.py```
-
-```│    ├── build_index.py```
-
-```│    ├── baseline_retrieval.py```
-
-```│    ├── adapted_retrieval.py```
-
-```│    ├── adapted_retrieval_int8.py```
-
-```│    ├── train_clip_phase_adapter.py```
-
-```│    ├── train_clip_phase_adapter_full.py```
-
-```│    ├── evaluate_retrieval_run.py```
-
-```│    ├── summarize_runs.py```
-
-```│    ├── phase_wise_accuracy.py```
-
-```│    ├── plot_overall_accuracy.py```
-
-```│    ├── plot_phase_accuracy.py```
-
-```│    ├── plot_phase_improvement_heatmap.py```
-
-```│    ├── plot_phase_sample_vs_gain.py```
-
-```│    ├── visualize_baseline_vs_adapter.py```
-
-```│    ├── visualize_triplet_examples.py```
-
-```│    ├── visualize_triplet_examples_adapted.py```
-
-```│    ├── visualize_attention_heatmap.py```
-
-```│    ├── sample_retrieval_examples.py```
-
-```│    ├── sample_retrieval_examples_adapted.py```
-
-```│    ├── sample_baseline_vs_adapter_examples.py```
-
-```│    ├── generate_shift_scores.py```
-
-```│    ├── reliability_analysis.py```
-
-```│    ├── benchmark_int8_analysis.py```
-
-```│    ├── pq_benchmark_analysis.py```
-
-```│    └── ...```
+```
+surgclip/
+│
+├── data/
+│   └── cholec80/
+│       ├── videos/                 # Cholec80 MP4 files
+│       ├── phase_annotations/      # Phase annotation txt files
+│       └── README.txt              # Official dataset description
+│
+├── frames/
+│   └── videoXX/frame_XXXXX.jpg     # Extracted frames
+│
+├── index/
+│   └── keyframe_index.csv          # Sampled keyframes for retrieval
+│
+├── results/
+│   ├── retrieval_scores*.json
+│   ├── retrieval_examples*.json
+│   ├── phase_wise_accuracy.csv
+│   ├── overall_accuracy_summary.csv
+│   ├── reliability_summary.csv
+│   │
+│   ├── figures/                    # Retrieval visualizations
+│   ├── figures_phase/              # Per-phase performance
+│   ├── figures_int8/               # Quantization evaluation
+│   ├── figures_pq/                 # PQ compression analysis
+│   └── figures_reliability/        # Robustness under shift
+│
+└── scripts/                        # Full pipeline
+│    ├── extract_frames.py
+│    ├── build_index.py
+│    ├── baseline_retrieval.py
+│    ├── adapted_retrieval.py
+│    ├── adapted_retrieval_int8.py
+│    ├── train_clip_phase_adapter.py
+│    ├── train_clip_phase_adapter_full.py
+│    ├── evaluate_retrieval_run.py
+│    ├── summarize_runs.py
+│    ├── phase_wise_accuracy.py
+│    ├── plot_overall_accuracy.py
+│    ├── plot_phase_accuracy.py
+│    ├── plot_phase_improvement_heatmap.py
+│    ├── plot_phase_sample_vs_gain.py
+│    ├── visualize_baseline_vs_adapter.py
+│    ├── visualize_triplet_examples.py
+│    ├── visualize_triplet_examples_adapted.py
+│    ├── visualize_attention_heatmap.py
+│    ├── sample_retrieval_examples.py
+│    ├── sample_retrieval_examples_adapted.py
+│    ├── sample_baseline_vs_adapter_examples.py
+│    ├── generate_shift_scores.py
+│    ├── reliability_analysis.py
+│    ├── benchmark_int8_analysis.py
+│    ├── pq_benchmark_analysis.py
+│    └── ...
+```
 
 # 3. Dataset (Cholec80)
 
