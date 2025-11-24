@@ -5,17 +5,61 @@
 # SurgClip: Domain-Adaptive CLIP for Surgical Video Keyframe–Text Retrieval
 ### with INT8 Inference Acceleration, PQ Compression, and Reliability Analysis
 
+# Table of Contents
+- [Introduction](introduction)
+- [Model Architecture](model-architecture)
+- [Environment Setup](#1-environment-setup)
+- [Project Structure](#2-project-structure)
+- [Dataset (Cholec80)](#3-dataset-cholec80)
+- [Full Pipeline](#4-full-pipeline)
+- [Key Results](#5-key-results)
+- [Visual Analysis](#6-visual-analysis)
+- [Demo: One-Frame Reliability Visualization](#7-demo-one-frame-reliability-visualization)
+- [INT8 Inference Acceleration](#8-int8-inference-acceleration)
+- [Product Quantization (PQ)](#9-product-quantization-pq)
+- [Reliability Under Distribution Shift](#10-reliability-under-distribution-shift)
+- [Citation](#11-citation)
+- [License](#12-license)
+
+# Introduction
+
+SurgClip is a **domain-adaptive CLIP-based retrieval system** for **surgical video keyframe–text matching**, designed for:
+
+- **Accuracy**
+
+- **Inference speed**
+
+- **Deployment stability and reliability**
+
+This project evaluates:
+
+- Baseline CLIP
+
+- CLIP with **phase adapter**
+
+- **INT8 quantized** adapter
+
+- **PQ compressed** embeddings
+
+- Robustness under **distribution shift**
+
+It includes a full pipeline—from frame extraction, indexing, retrieval evaluation, visualization, to acceleration and robustness experiments.
 SurgClip is a complete system for **keyframe–text retrieval in surgical videos**, built on top of CLIP with:
 
-- **Phase-level domain adaptation**
-- **Improved retrieval accuracy (Top-1: 0.18 → 0.52)**
-- **Comprehensive visualization pipeline**
-- **INT8 dynamic quantization for lightweight deployment**
-- **Product Quantization (PQ) for large-scale embedding compression**
-- **Robustness evaluation under distribution shift**
-- **Fully reproducible scripts & results**
+# Model Architecture
+<p align="center"> <img src="surgclip_architecture.png" width="100%"> </p>
 
-This repository contains the complete implementation, dataset preparation steps, evaluation pipeline, and visual analysis.
+The system consists of:
+
+- **CLIP Image Encoder**
+
+- **CLIP Text Encoder**
+
+- **Phase Adapter (trained on Cholec80)**
+
+- **Cosine Similarity Retrieval**
+
+Adapters adjust CLIP’s representation to surgical domain characteristics—high occlusions, deformation, illumination variance.
 
 ---
 
@@ -24,6 +68,7 @@ This repository contains the complete implementation, dataset preparation steps,
 ### 1.1 Create Conda Environment
 
 ```conda create -n surgclip python=3.10 -y```
+
 ```conda activate surgclip```
 
 ### 1.2 Install PyTorch (CUDA 12.1)
@@ -41,6 +86,14 @@ Download: ```https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.zip```
 Extract to: ```C:\ffmpeg\```
 
 Add to PATH: ```C:\ffmpeg\bin```
+
+### 1.5 Clone and install dependencies
+
+```git clone https://github.com/YueranCao2001/surgclip.git```
+
+```cd surgclip```
+
+```pip install -r requirements.txt```
 
 # 2. Project Structure
 
@@ -457,9 +510,15 @@ Figures are stored in: ```results/figures_reliability/```
 
 # 11. Citation
 
-```Yueran Cao.```
-
-```Domain-Adaptive CLIP for Surgical Video Keyframe–Text Retrieval with Inference Acceleration and System Reliability Analysis. (2025)```
+```bibtex
+@misc{cao2025surgclip,
+  author       = {Yueran Cao},
+  title        = {SurgClip: Domain-Adaptive CLIP for Surgical Video Keyframe--Text Retrieval with Inference Acceleration and Reliability Analysis},
+  year         = {2025},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/YueranCao2001/surgclip}
+}
+```
 
 # 12. License
 
