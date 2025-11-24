@@ -3,7 +3,7 @@
 </p>
 
 # SurgClip: Domain-Adaptive CLIP for Surgical Video Keyframe–Text Retrieval
-### with INT8 Inference Acceleration, PQ Compression, and Reliability Analysis
+## with INT8 Inference Acceleration, PQ Compression, and Reliability Analysis
 
 # Table of Contents
 - [Introduction](introduction)
