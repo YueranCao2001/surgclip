@@ -1,0 +1,957 @@
+{
+  "num_frames": 184578,
+  "top1_accuracy": 0.17774599356369664,
+  "top5_accuracy": 0.839612521535611,
+  "examples": [
+    {
+      "frame_path": "frames\\video01\\frame_000000.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000001.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        6
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "Residual bleeding or bile leakage is being controlled by cleaning and coagulation."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000002.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        6
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "Residual bleeding or bile leakage is being controlled by cleaning and coagulation."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000003.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        1,
+        6
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "Residual bleeding or bile leakage is being controlled by cleaning and coagulation."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000004.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        6,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "Residual bleeding or bile leakage is being controlled by cleaning and coagulation.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000005.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000006.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000007.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        4,
+        7,
+        5
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being packed and prepared for removal."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000008.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000009.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000010.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000011.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000012.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000013.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000014.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000015.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        1,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000016.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000017.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000018.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000019.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        1,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000020.jpg",
+      "true_phase_id": 1,
+      "true_phase_text": "The surgical tools are being inserted and the field is prepared for the procedure.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000021.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000022.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000023.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000024.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000025.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000026.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000027.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000028.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000029.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        6
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "Residual bleeding or bile leakage is being controlled by cleaning and coagulation."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000030.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        6
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "Residual bleeding or bile leakage is being controlled by cleaning and coagulation."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000031.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000032.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000033.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000034.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        6
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "Residual bleeding or bile leakage is being controlled by cleaning and coagulation."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000035.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        6
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "Residual bleeding or bile leakage is being controlled by cleaning and coagulation."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000036.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000037.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000038.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        6
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "Residual bleeding or bile leakage is being controlled by cleaning and coagulation."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000039.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        1,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000040.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000041.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        1,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000042.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        1,
+        7,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000043.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        1,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000044.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        1,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000045.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        1,
+        4
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The surgical tools are being inserted and the field is prepared for the procedure.",
+        "The gallbladder is being dissected away from the liver bed."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000046.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000047.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000048.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000049.jpg",
+      "true_phase_id": 2,
+      "true_phase_text": "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+      "pred_phase_ids": [
+        3,
+        2,
+        7,
+        4,
+        1
+      ],
+      "pred_phase_texts": [
+        "The cystic duct and artery are being clipped and cut to separate them safely.",
+        "The surgeon is dissecting tissue in Calot's triangle to expose the cystic duct and artery.",
+        "The gallbladder is being extracted from the abdominal cavity.",
+        "The gallbladder is being dissected away from the liver bed.",
+        "The surgical tools are being inserted and the field is prepared for the procedure."
+      ]
+    }
+  ]
+}

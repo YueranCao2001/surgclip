@@ -1,0 +1,3 @@
+model,avg_latency_ms
+adapter_fp32_cpu,0.0474
+adapter_int8_cpu,0.1605

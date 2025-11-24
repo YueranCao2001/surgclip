@@ -1,0 +1,75 @@
+# =========================================
+# SurgClip project .gitignore
+# =========================================
+
+# ---------------------
+# 1. Dataset directories
+# ---------------------
+# Ignore dataset content (too large, restricted)
+data/cholec80/videos/*
+data/cholec80/phase_annotations/*
+
+# Keep folder structure & dataset readme
+!data/
+!data/cholec80/
+!data/cholec80/videos/
+!data/cholec80/phase_annotations/
+!data/cholec80/README.txt
+
+# ---------------------
+# 2. Frames (regenerated)
+# ---------------------
+frames/*
+!frames/
+
+# ---------------------
+# 3. Results
+# ---------------------
+# Upload ALL results except extremely large JSONs
+
+# These files exceed GitHub's 100 MB limit → ignore
+results/retrieval_scores_shift_brightness_blur.json
+results/retrieval_scores_adapted_shift_brightness_blur.json
+results/retrieval_scores_adapted_int8_shift_brightness_blur.json
+
+# Allow everything else in results/
+!results/
+
+# ---------------------
+# 4. Python cache
+# ---------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ---------------------
+# 5. Virtual environments
+# ---------------------
+.env/
+.venv/
+env/
+venv/
+
+# ---------------------
+# 6. IDE / OS files
+# ---------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---------------------
+# 7. Logs and temporary
+# ---------------------
+*.log
+tmp/
+scratch/
+local_test/
+
+# ---------------------
+# 8. Compressed files
+# ---------------------
+*.zip
+*.tar.gz
+*.rar

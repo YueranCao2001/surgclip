@@ -1,0 +1,558 @@
+{
+  "num_frames": 184578,
+  "top1_accuracy": 0.510255826804928,
+  "top5_accuracy": 0.9574922255089989,
+  "examples": [
+    {
+      "frame_path": "frames\\video01\\frame_000000.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        1,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000001.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        1,
+        5,
+        2,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000002.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        5,
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000003.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        1,
+        5,
+        6,
+        2
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000004.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        1,
+        5,
+        6,
+        4
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000005.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        5,
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000006.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        1,
+        5,
+        4,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000007.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        1,
+        5,
+        2,
+        4
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000008.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        1,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000009.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        1,
+        5,
+        2,
+        3
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000010.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        1,
+        5,
+        2,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000011.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        3,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000012.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        2,
+        7,
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000013.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        1,
+        7,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000014.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        1,
+        7,
+        6,
+        2,
+        5
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000015.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000016.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        1,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000017.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        1,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000018.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        2,
+        1,
+        5,
+        3
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000019.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        7,
+        2,
+        1,
+        5,
+        3
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000020.jpg",
+      "true_phase_id": 1,
+      "pred_phase_ids": [
+        1,
+        7,
+        2,
+        5,
+        3
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000021.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        1,
+        7,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000022.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        7,
+        1,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000023.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        6,
+        5
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000024.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        6,
+        5
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000025.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        3,
+        7,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000026.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        3,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000027.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        7,
+        1,
+        5,
+        3
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000028.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000029.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000030.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        6,
+        5
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000031.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        3,
+        7,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000032.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        3,
+        1,
+        7,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000033.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000034.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000035.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000036.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        7,
+        5,
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000037.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        7,
+        1,
+        5,
+        3
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000038.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        6,
+        5
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000039.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        6,
+        5
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000040.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        3,
+        7,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000041.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        6,
+        5
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000042.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        1,
+        7,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000043.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        1,
+        7,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000044.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        1,
+        2,
+        7,
+        5,
+        6
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000045.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        6,
+        5
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000046.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        1,
+        2,
+        6,
+        7,
+        5
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000047.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        1,
+        6,
+        7,
+        5,
+        2
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000048.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        1,
+        6,
+        2,
+        7,
+        5
+      ]
+    },
+    {
+      "frame_path": "frames\\video01\\frame_000049.jpg",
+      "true_phase_id": 2,
+      "pred_phase_ids": [
+        2,
+        1,
+        7,
+        6,
+        5
+      ]
+    }
+  ],
+  "quantization": "INT8 adapter only"
+}

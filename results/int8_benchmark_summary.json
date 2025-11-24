@@ -1,0 +1,22 @@
+{
+  "device": "cuda",
+  "notes": "INT8 adapter is built via torch.quantization.quantize_dynamic and runs on CPU only. CLIP backbone still runs on GPU if available.",
+  "latency_ms_cpu": {
+    "adapter_fp32": 0.04736137390136719,
+    "adapter_int8": 0.16052627563476562
+  },
+  "file_size_MB": {
+    "adapter_fp32": 2.006011962890625,
+    "adapter_int8": 0.5073623657226562
+  },
+  "num_params": {
+    "adapter_fp32": 525312,
+    "adapter_int8": 0
+  },
+  "representation_error": {
+    "l2_error": 0.07844088226556778,
+    "mean_abs_error": 0.002774164779111743,
+    "max_abs_error": 0.00980464369058609,
+    "cosine_similarity": 0.9998090863227844
+  }
+}

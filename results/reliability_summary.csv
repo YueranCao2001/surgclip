@@ -1,0 +1,7 @@
+method,condition,top1,top5
+baseline_fp32,normal,0.0,0.94
+baseline_fp32,shift_brightness_blur,0.2956311153008484,0.8288528427006469
+adapter_fp32,normal,0.56,1.0
+adapter_fp32,shift_brightness_blur,0.398866603820607,0.694448959247581
+adapter_int8,normal,0.48,1.0
+adapter_int8,shift_brightness_blur,0.3980972813661433,0.696632318044404

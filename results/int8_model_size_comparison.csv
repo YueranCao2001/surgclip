@@ -1,0 +1,3 @@
+model,file_size_MB,num_params
+adapter_fp32,2.006012,525312
+adapter_int8_cpu,0.507362,0
