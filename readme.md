@@ -41,10 +41,9 @@ This project evaluates:
 
 - **PQ compressed** embeddings
 
-- Robustness under **distribution shift**
+- **Reliability** under **distribution shift**
 
-It includes a full pipeline—from frame extraction, indexing, retrieval evaluation, visualization, to acceleration and robustness experiments.
-SurgClip is a complete system for **keyframe–text retrieval in surgical videos**, built on top of CLIP with:
+It includes a full pipeline—from frame extraction, indexing, retrieval evaluation, visualization, to acceleration and reliability experiments.
 
 # Model Architecture
 <p align="center"> <img src="surgclip_architecture.png" width="100%"> </p>
