@@ -356,6 +356,18 @@ Scripts:
 
 ```benchmark_int8_analysis.py```
 
+<p align="center">
+  <img src="results/figures_int8/int8_representation_error_hist.png" width="100%">
+</p>
+
+<p align="center">
+  <img src="results/figures_int8/int8_model_size_comparison.png" width="100%">
+</p>
+
+<p align="center">
+  <img src="results/figures_int8/int8_speed_benchmark.png" width="100%">
+</p>
+
 ## INT8 Summary
 
 | Metric              | FP32 | INT8 (CPU) |
@@ -378,6 +390,22 @@ Scripts:
 # 9. Product Quantization (PQ)
 
 Script: ```pq_benchmark_analysis.py```
+
+<p align="center">
+  <img src="results/figures_pq/pq_recall_bar.png" width="100%">
+</p>
+
+<p align="center">
+  <img src="results/figures_pq/pq_latency_comparison.png" width="100%">
+</p>
+
+<p align="center">
+  <img src="results/figures_pq/pq_memory_comparison.png" width="100%">
+</p>
+
+<p align="center">
+  <img src="results/figures_pq/pq_representation_error_hist.png" width="100%">
+</p>
 
 ## PQ Summary
 
@@ -406,6 +434,14 @@ Generate shifted retrieval:
 ```python scripts/generate_shift_scores.py --method adapted_int8 --shift brightness_blur```
 
 Evaluate robustness: python ```scripts/reliability_analysis.py```
+
+<p align="center">
+  <img src="results/figures_reliability/top1_top5_accuracy_bar.png" width="100%">
+</p>
+
+<p align="center">
+  <img src="results/figures_reliability/phase_accuracy_diff.png" width="100%">
+</p>
 
 ### Findings:
 
