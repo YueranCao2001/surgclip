@@ -1,556 +1,432 @@
-# Domain-Adaptive CLIP for Surgical Video Keyframe–Text Retrieval  
-### with Inference Acceleration and System Reliability Analysis
+<p align="center">
+  <img src="surgclip_banner.png" width="100%">
+</p>
 
-This repository contains the full implementation of a domain-adaptive CLIP system
-that improves keyframe–text retrieval for surgical videos (Cholec80 dataset).  
-The project includes:
+# SurgClip: Domain-Adaptive CLIP for Surgical Video Keyframe–Text Retrieval
+### with INT8 Inference Acceleration, PQ Compression, and Reliability Analysis
 
-- Keyframe extraction from surgical videos  
-- CLIP feature extraction (baseline & domain-adapted)  
-- Phase-level domain adaptation modules  
-- Retrieval evaluation (Top-1 / Top-5)  
-- Per-phase accuracy analysis  
-- Visualization of improvements and failures  
-- Statistical summary & reproducibility scripts  
-- Preparation for INT8 inference acceleration (work in progress)
+SurgClip is a complete system for **keyframe–text retrieval in surgical videos**, built on top of CLIP with:
 
-This README documents the full workflow **before INT8 acceleration**.
+- **Phase-level domain adaptation**
+- **Improved retrieval accuracy (Top-1: 0.18 → 0.52)**
+- **Comprehensive visualization pipeline**
+- **INT8 dynamic quantization for lightweight deployment**
+- **Product Quantization (PQ) for large-scale embedding compression**
+- **Robustness evaluation under distribution shift**
+- **Fully reproducible scripts & results**
+
+This repository contains the complete implementation, dataset preparation steps, evaluation pipeline, and visual analysis.
 
 ---
 
-# 1. Installation
+# 1. Environment Setup
 
-## 1.1 Create Conda Environment
+### 1.1 Create Conda Environment
 
-conda create -n surgclip python=3.10 -y
-conda activate surgclip
+```conda create -n surgclip python=3.10 -y```
+```conda activate surgclip```
 
-## 1.2 Install PyTorch with CUDA 12.1
+### 1.2 Install PyTorch (CUDA 12.1)
 
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121```
 
-## 1.3 Install Project Dependencies
-pip install open-clip-torch pillow numpy pandas matplotlib tqdm opencv-python ffmpeg-python
+### 1.3 Install Dependencies
 
-## 1.4 Install FFmpeg (Windows, without Chocolatey)
-Download official build:
-https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.zip
+```pip install open-clip-torch pillow numpy pandas matplotlib tqdm opencv-python ffmpeg-python scikit-learn```
 
-Extract to:
-C:\ffmpeg\
+### 1.4 Install FFmpeg (Windows, no Chocolatey)
 
-Add to PATH:
-C:\ffmpeg\bin
-Verify:
-ffmpeg -version
+Download: ```https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.zip```
 
-# 2. Directory Structure
-surgclip/
-├── data/
-│   └── cholec80/
-│       ├── videos/
-│       └── phase_annotations/
-│
-├── frames/
-│   └── videoXX/frame_000123.jpg
-│
-├── index/
-│   └── keyframe_index.csv
-│
-├── results/
-│   ├── retrieval_scores.json
-│   ├── retrieval_scores_adapted.json
-│   ├── phase_wise_accuracy.csv
-│   ├── overall_accuracy_summary.csv
-│   ├── figures/
-│   │   ├── overall_accuracy_bar.png
-│   │   ├── baseline_vs_adapted_improved.png
-│   │   ├── baseline_vs_adapted_degraded.png
-│   │   ├── adapted_top1_correct.png
-│   │   ├── adapted_top5_correct_only.png
-│   │   ├── triplet_failures.png
-│   │   └── attention_example.png
-│   └── figures_phase/
-│       ├── phase_delta_heatmap.png
-│       ├── phase_accuracy_grouped_bar.png
-│       ├── phase_accuracy_delta_bar.png
-│       ├── phase_accuracy_baseline_vs_adapt.png
-│       ├── phase_sample_vs_gain.png
-    ├── int8_benchmark_summary.json
-│   ├── int8_model_size_comparison.csv
-│   ├── int8_speed_benchmark.csv
-│   ├── int8_representation_error.csv
-│   └── figures_int8/
-│       ├── int8_model_size_comparison.png
-│       ├── int8_speed_benchmark.png
-│       └── int8_representation_error_hist.png
-│
-└── scripts/
-    ├── extract_frames.py
-    ├── build_index.py
-    ├── baseline_retrieval.py
-    ├── adapted_retrieval.py
-    ├── adapted_retrieval_int8.py
-    ├── train_clip_phase_adapter.py
-    ├── train_clip_phase_adapter_full.py
-    ├── evaluate_retrieval_run.py
-    ├── phase_wise_accuracy.py
-    ├── summarize_runs.py
-    ├── plot_overall_accuracy.py
-    ├── plot_phase_accuracy.py
-    ├── plot_phase_sample_vs_gain.py
-    ├── plot_phase_improvement_heatmap.py
-    ├── visualize_baseline_vs_adapter.py
-    ├── visualize_triplet_examples.py
-    ├── visualize_triplet_examples_adapted.py
-    ├── visualize_attention_heatmap.py
-    ├── sample_retrieval_examples.py
-    ├── sample_retrieval_examples_adapted.py
-    └── sample_baseline_vs_adapter_examples.py
-    ├── benchmark_int8_analysis.py
-    └── adapted_retrieval_int8.py
+Extract to: ```C:\ffmpeg\```
 
-# 3. Dataset Preparation (Cholec80)
-The Cholec80 dataset must be requested from:
-https://camma.unistra.fr/datasets/
+Add to PATH: ```C:\ffmpeg\bin```
 
-Place the files as follows:
-data/cholec80/videos/*.mp4
-data/cholec80/phase_annotations/*.txt
+# 2. Project Structure
+
+```surgclip/```
+
+```│```
+
+```├── data/```
+
+```│   └── cholec80/```
+
+```│       ├── videos/```                 # Cholec80 MP4 files
+
+```│       ├── phase_annotations/```      # Phase annotation txt files
+
+```│       └── README.txt```              # Official dataset description
+
+```│```
+
+```├── frames/```
+
+```│   └── videoXX/frame_XXXXX.jpg```     # Extracted frames
+
+```│```
+
+```├── index/```
+
+```│   └── keyframe_index.csv```          # Sampled keyframes for retrieval
+
+```│```
+
+```├── results/```
+
+```│   ├── retrieval_scores*.json```
+
+```│   ├── retrieval_examples*.json```
+
+```│   ├── phase_wise_accuracy.csv```
+
+```│   ├── overall_accuracy_summary.csv```
+
+```│   ├── reliability_summary.csv```
+
+```│   │```
+
+```│   ├── figures/```                    # Retrieval visualizations
+
+```│   ├── figures_phase/```              # Per-phase performance
+
+```│   ├── figures_int8/```               # Quantization evaluation
+
+```│   ├── figures_pq/```                 # PQ compression analysis
+
+```│   └── figures_reliability/```        # Robustness under shift
+
+```│```
+
+```└── scripts/```                        # Full pipeline
+
+```│    ├── extract_frames.py```
+
+```│    ├── build_index.py```
+
+```│    ├── baseline_retrieval.py```
+
+```│    ├── adapted_retrieval.py```
+
+```│    ├── adapted_retrieval_int8.py```
+
+```│    ├── train_clip_phase_adapter.py```
+
+```│    ├── train_clip_phase_adapter_full.py```
+
+```│    ├── evaluate_retrieval_run.py```
+
+```│    ├── summarize_runs.py```
+
+```│    ├── phase_wise_accuracy.py```
+
+```│    ├── plot_overall_accuracy.py```
+
+```│    ├── plot_phase_accuracy.py```
+
+```│    ├── plot_phase_improvement_heatmap.py```
+
+```│    ├── plot_phase_sample_vs_gain.py```
+
+```│    ├── visualize_baseline_vs_adapter.py```
+
+```│    ├── visualize_triplet_examples.py```
+
+```│    ├── visualize_triplet_examples_adapted.py```
+
+```│    ├── visualize_attention_heatmap.py```
+
+```│    ├── sample_retrieval_examples.py```
+
+```│    ├── sample_retrieval_examples_adapted.py```
+
+```│    ├── sample_baseline_vs_adapter_examples.py```
+
+```│    ├── generate_shift_scores.py```
+
+```│    ├── reliability_analysis.py```
+
+```│    ├── benchmark_int8_analysis.py```
+
+```│    ├── pq_benchmark_analysis.py```
+
+```│    └── ...```
+
+# 3. Dataset (Cholec80)
+
+Request via: ```https://camma.unistra.fr/datasets/```
+
+Place files:
+
+```data/cholec80/videos/*.mp4```
+
+```data/cholec80/phase_annotations/*.txt```
+
+The official dataset README (data/cholec80/README.txt) describes:
+- **Phase annotation format**
+- **Dataset license**
+- **Surgical workflow definitions**
 
 # 4. Full Pipeline
+
 ## Step 1 — Extract Frames
-python scripts/extract_frames.py
-Output → frames/videoXX/*.jpg
+
+```python scripts/extract_frames.py```
+
+Output → ```frames/videoXX/*.jpg```
 
 ## Step 2 — Build Keyframe Index
-python scripts/build_index.py
-Output → index/keyframe_index.csv
+
+```python scripts/build_index.py```
+
+Output → ```index/keyframe_index.csv```
 
 ## Step 3 — Baseline CLIP Retrieval
-python scripts/baseline_retrieval.py
-Output →
-results/retrieval_scores.json
-results/retrieval_examples.json
 
-## Step 4 — Train Domain-Adaptive CLIP (Phase Adapter)
-Short adapter:
-python scripts/train_clip_phase_adapter.py
+```python scripts/baseline_retrieval.py```
 
-Full adapter:
-python scripts/train_clip_phase_adapter_full.py
-Outputs saved to:
-results/clip_adapter_best.pth
-results/checkpoints/
+Outputs:
+
+```results/retrieval_scores.json```
+
+```results/retrieval_examples.json```
+
+## Step 4 — Train Phase Adapter
+
+Short adapter: ```python scripts/train_clip_phase_adapter.py```
+
+Full adapter: ```python scripts/train_clip_phase_adapter_full.py```
+
+Outputs:
+
+```results/clip_adapter_best.pth```
+
+```results/checkpoints/*.pth```
 
 ## Step 5 — Adapted CLIP Retrieval
-python scripts/adapted_retrieval.py
-Output →
-results/retrieval_scores_adapted.json
-results/retrieval_examples_adapted.json
 
-## Step 6 — Summarize Overall Accuracy
-python scripts/summarize_runs.py
-Output →
-overall_accuracy_summary.csv
+```python scripts/adapted_retrieval.py```
 
-## Step 7 — Generate Visual Figures
-### Overall Accuracy Bar Chart
-python scripts/plot_overall_accuracy.py
+## Step 6 — Summaries & Metrics
 
-### Per-Phase Accuracy Comparison
-python scripts/plot_phase_accuracy.py
-python scripts/plot_phase_improvement_heatmap.py
-python scripts/plot_phase_sample_vs_gain.py
+```python scripts/summarize_runs.py```
 
-### Triplet Visualizations
-python scripts/visualize_triplet_examples.py
-python scripts/visualize_triplet_examples_adapted.py
+```python scripts/phase_wise_accuracy.py```
 
-### Examples of Good/Bad Predictions
-python scripts/sample_retrieval_examples.py
-python scripts/sample_retrieval_examples_adapted.py
-python scripts/sample_baseline_vs_adapter_examples.py
+## Step 7 — Visualization
+
+```python scripts/plot_overall_accuracy.py```
+
+```python scripts/plot_phase_accuracy.py```
+
+```python scripts/plot_phase_improvement_heatmap.py```
+
+```python scripts/plot_phase_sample_vs_gain.py```
+
+```python scripts/visualize_triplet_examples.py```
+
+```python scripts/visualize_triplet_examples_adapted.py```
+
+```python scripts/visualize_attention_heatmap.py```
+
+```python scripts/sample_retrieval_examples.py```
+
+```python scripts/sample_retrieval_examples_adapted.py```
 
 # 5. Key Results
-## Overall accuracy improved significantly:
-Model	Top-1	Top-5
-Baseline (CLIP)	0.18	0.84
-Phase-Adapted CLIP	0.52	0.96
 
-## Phase-wise Improvements
-See:
-figures_phase/phase_delta_heatmap.png
-figures_phase/phase_sample_vs_gain.png
+### Overall Retrieval Accuracy
 
-## Visual Improvements
-Examples include:
-Improved retrieval samples
-Failure cases
-CLIP attention maps
-Triplet comparison
-Ranking improvements
+| Model               | Top-1 | Top-5 |
+|---------------------|:-----:|:-----:|
+| Baseline CLIP       | 0.18  | 0.84  |
+| **Phase-Adapted CLIP** | **0.52** | **0.96** |
 
-Stored under:
-results/figures/
-results/figures_phase/
+# 6. Visual Analysis
 
-# 6. Reliability Analysis
-The project additionally includes:
+## 6.1 Overall Accuracy Bar Plot
 
-Visualization of stability across phases
-Comparative analysis baseline vs. adapted
-Robustness to ambiguous frames
-Retrieval consistency evaluation
+<p align="center">
+  <img src="results/figures/overall_accuracy_bar.png" width="100%">
+</p>
+
+### Analysis
+
+- CLIP trained on natural images performs poorly (Top-1 = 18%).
+
+- Phase adapter significantly increases discriminative ability.
+
+- Top-5 rises to 96%, indicating stronger global ranking stability.
+
+## 6.2 Phase Delta Heatmap
+
+<p align="center">
+  <img src="results/figures_phase/phase_delta_heatmap.png" width="100%">
+</p>
+
+### Analysis
+
+- Accuracy improves across nearly all surgical phases.
+
+- High-gesture phases show the strongest gains.
+
+- No phase experiences negative transfer.
+
+### 6.3 Sample Count vs Performance Gain
+
+<p align="center">
+  <img src="results/figures_phase/phase_sample_vs_gain.png" width="100%">
+</p>
+
+### Analysis
+
+- More annotated samples → larger improvements.
+
+- Low-sample phases still see positive but smaller gains.
+
+- Indicates adapter benefits from balanced annotation distribution.
+
+## 6.4 Triplet Visualization
+
+<p align="center">
+  <img src="results/figures/triplet_failures.png" width="100%">
+</p>
+
+<p align="center">
+  <img src="results/figures/triplet_top5_correct_only.png" width="100%">
+</p>
+
+### Analysis
+
+- Baseline failures often stem from tool similarity or motion blur.
+
+- Adapter reshapes embedding space toward phase-specific semantics.
+
+- Many wrong top-ranked frames become correctly ranked after adaptation.
+
+## 6.5 Attention Heatmap
+
+<p align="center">
+  <img src="results/figures/attention_example.png" width="100%">
+</p>
+
+### Analysis
+
+- Baseline attention is scattered across irrelevant regions.
+
+- Adapted CLIP focuses more on critical surgical interaction points.
+
+- Strong evidence of successful domain alignment.
+
+# 7. Demo: One-Frame Reliability Visualization
+
+Run: ```python scripts/demo_reliability_one_frame_vis.py```
+
+Files:
+
+```results/demo_reliability_one_frame_vis.json```
+
+```results/demo_reliability_one_frame_vis.png```
+
+<p align="center">
+  <img src="results/demo_reliability_one_frame_vis.png" width="100%">
+</p>
+
+### Demo Purpose
+
+- Shows the effect of distribution shift (brightness + blur).
+
+- Compares predictions from:
+
+-- baseline CLIP
+
+-- adapted CLIP
+
+-- adapted INT8
+
+- Reveals ranking change, similarity drop, and attention shifts.
+
+This demo can be directly included in papers as a robustness case study.
+
+# 8. INT8 Inference Acceleration
 
 Scripts:
-visualize_baseline_vs_adapter.py
-visualize_triplet_examples.py
-visualize_triplet_examples_adapted.py
-visualize_attention_heatmap.py
 
-# 7. INT8 Inference Acceleration
+```adapted_retrieval_int8.py```
 
-We implemented CPU-only dynamic INT8 quantization for the phase adapter using:
-PyTorch quantize_dynamic
-Only applied on torch.nn.Linear
-CLIP visual backbone still runs on GPU (FP32), adapter runs on CPU (INT8)
+```benchmark_int8_analysis.py```
 
-Scripts:
-scripts/benchmark_int8_analysis.py
-scripts/adapted_retrieval_int8.py
+## INT8 Summary
 
-## INT8 Benchmark Summary
+| Metric              | FP32 | INT8 (CPU) |
+|---------------------|:-----:|:-----:|
+| Adapter size       | 2.01 MB  | **0.51 MB**  |
+| Latency | 0.047 ms | 0.160 ms |
+| Cosine similarity | - | **0.99981** | 
+| MAE | - | 0.00277 |
 
+### Analysis
 
-Metric	FP32	INT8 (CPU)
-Adapter file size	2.01 MB	0.51 MB
-Avg latency (ms/frame)	0.047 ms	0.160 ms
-Cosine similarity	—	0.99981
-Mean abs error	—	0.00277
-Max abs error	—	0.00980
+- 4× size reduction
 
-## Generated Figures
+- Very small numerical degradation
 
-figures_int8/int8_model_size_comparison.png
-figures_int8/int8_speed_benchmark.png
-figures_int8/int8_representation_error_hist.png
+- CPU dynamic quantization slower than GPU FP32
 
-These show:
-≈4× reduction in adapter size
-Small numerical error (MAE < 0.003)
-INT8 slower than FP32 due to CPU-only dynamic quantization (PyTorch limitation)
+- Good for deployment on size-limited devices
 
-## Notes
+# 9. Product Quantization (PQ)
 
-PyTorch dynamic INT8 cannot run on CUDA, so latency is CPU-bound
-True GPU-accelerated INT8 would require ONNX/TensorRT or QAT
-Current implementation is suitable for size-constrained deployments
+Script: ```pq_benchmark_analysis.py```
 
-All INT8 experiments are fully reproducible using
-scripts/benchmark_int8_analysis.py,
-and the generated CSV/JSON files are stored under results/.
+## PQ Summary
 
-# 8. Product Quantization (PQ) for Large-Scale Retrieval
-To further accelerate retrieval and reduce memory footprint of image embeddings, we evaluate Product Quantization (PQ) on 92,289 surgical-frame embeddings extracted by CLIP (ViT-B/32).
+| Category              | Result |
+|---------------------|:-----:|
+| Compression       | **150× smaller**  |
+| Speed | **2.1× faster** |
+| Recall | Preserved (log-scale similarity) |
+| Error | MAE ≈ 0.004 |
 
-Our PQ implementation uses M = 8 subspaces with subvector dimension 64, trained on a subset of 20,000 frames.
+### Analysis
 
-All scripts are provided under: scripts/pq_benchmark_analysis.py
+- 180 MB → 1.2 MB embedding storage
 
-## 8.1 Memory Reduction
+- Low reconstruction noise
 
-PQ encoding reduces the embedding storage from 180.25 MB → 1.20 MB, achieving: ≈150× compression
+- Good for large-scale gallery retrieval (90k+ frames)
 
-while keeping reconstruction error small and stable.
+# 10. Reliability Under Distribution Shift
+Generate shifted retrieval:
 
-Type	Storage
-FP32 embeddings	180.25 MB
-PQ codes	1.20 MB
+```python scripts/generate_shift_scores.py --method baseline --shift brightness_blur```
 
-Figure:
-results/figures_pq/pq_memory_comparison.png
+```python scripts/generate_shift_scores.py --method adapted --shift brightness_blur```
 
-## 8.2 Retrieval Latency
+```python scripts/generate_shift_scores.py --method adapted_int8 --shift brightness_blur```
 
-We compare per-query retrieval time using cosine similarity:
+Evaluate robustness: python ```scripts/reliability_analysis.py```
 
-FP32 full search: 4.30 ms/query
+### Findings:
 
-PQ asymmetric search: 2.03 ms/query
+- Baseline CLIP degrades sharply under shift.
 
-This yields a ~2.1× speed-up.
+- Adapted CLIP maintains significantly higher stability.
 
-Figure:
-results/figures_pq/pq_latency_comparison.png
+- INT8 model preserves robustness nearly identical to FP32.
 
-## 8.3 Retrieval Quality (Recall)
+- Per-phase deviation is small, indicating consistent behavior.
 
-Due to the difficulty of the Cholec80 text-image alignment task, raw recall values are very low, but PQ preserves relative retrieval quality extremely well.
+Figures are stored in: ```results/figures_reliability/```
 
-We use a log-scale plot to highlight the trend:
+# 11. Citation
 
-Figure:
-results/figures_pq/pq_recall_logscale.png
+```Yueran Cao.```
 
-Your plotted values:
+```Domain-Adaptive CLIP for Surgical Video Keyframe–Text Retrieval with Inference Acceleration and System Reliability Analysis. (2025)```
 
-Recall	FP32	PQ (INT-encoded)
-R@1	~3e-6	~2e-6
-R@5	~6e-5	~9e-5
-R@10	~1e-4	~2e-4
-R@50	~5e-4	~1e-3
+# 12. License
 
-Observations:
+This project is for **academic research only**.
 
-PQ slightly improves R@5–R@50 due to quantization smoothing effects.
-
-No significant degradation at any recall level.
-
-## 8.4 Representation Error Analysis
-
-We compute element-wise reconstruction errors over 92,289 embeddings:
-
-Mean abs error ≈ 0.004
-
-Error distribution centered at 0, tight variance
-
-No long-tail failure cases
-
-Histogram:
-results/figures_pq/pq_representation_error_hist.png
-
-This confirms that PQ compression preserves embedding geometry sufficiently for efficient retrieval.
-
-## 8.5 Summary
-Category	Result
-Compression	150× smaller
-Speed	2.1× faster retrieval
-Accuracy	Recall curve maintained (log-scale)
-Error	Small reconstruction noise
-
-## Conclusion:
-PQ is an effective method for large-scale embedding compression in surgical video retrieval pipelines, providing significant memory and speed benefits with minimal accuracy loss.
-
-# 9. Reliability under Distribution Shift
-
-This section evaluates how robust and stable the retrieval system is when the input frames are corrupted by a simple synthetic distribution shift, instead of only reporting accuracy on clean (normal) data.
-
-We focus on phase-level text–image retrieval and compare:
-
-1. Baseline CLIP (frozen image encoder)
-
-2. Domain-adapted CLIP (with phase adapter, FP32)
-
-3. Domain-adapted CLIP INT8 (adapter quantized with dynamic INT8)
-
-The goal is to measure how much performance degrades under a shift, and how much the adapter helps.
-
-## 1. Synthetic SHIFT dataset (brightness + blur)
-
-To simulate a realistic but controlled distribution shift, we generate a shifted version of the keyframe set purely at inference time (no re-training):
-
-1. reduce brightness (darker scene)
-
-2. slightly reduce contrast
-
-3. add a mild Gaussian blur
-
-This is implemented in: scripts/generate_shift_scores.py
-
-
-The script:
-
-1. Reads the original keyframe index (index/keyframe_index.csv)
-
-2. Loads the same CLIP backbone and optional adapter
-
-3. Applies the chosen corruption (brightness_blur) to each frame on-the-fly
-
-4. Runs text–image retrieval for the 7 phase prompts
-
-5. Writes a new retrieval_scores_*.json with the same schema as normal runs
-
-Supported methods:
-
-1. baseline
-
-2. adapted
-
-3. adapted_int8
-
-Run from project root:
-
-# 1) Baseline CLIP under shift
-python scripts/generate_shift_scores.py --method baseline --shift brightness_blur
-
-# 2) Adapted CLIP (FP32) under shift
-python scripts/generate_shift_scores.py --method adapted --shift brightness_blur
-
-# 3) Adapted CLIP (INT8) under shift
-python scripts/generate_shift_scores.py --method adapted_int8 --shift brightness_blur
-
-
-After running these, the following files appear in results/:
-
-retrieval_scores_shift_brightness_blur.json
-
-retrieval_scores_adapted_shift_brightness_blur.json
-
-retrieval_scores_adapted_int8_shift_brightness_blur.json
-
-
-They correspond 1:1 with the normal versions:
-
-retrieval_scores.json
-
-retrieval_scores_adapted.json
-
-retrieval_scores_adapted_int8.json
-
-
-2. Reliability analysis: normal vs. shifted
-
-We use: ```scripts/reliability_analysis.py``` to jointly analyze normal and shifted runs.
-
-The script performs the following steps:
-
-1. Load normal JSONs
-
-results/retrieval_scores.json
-
-results/retrieval_scores_adapted.json
-
-results/retrieval_scores_adapted_int8.json
-
-
-2. Load shifted JSONs (if they exist)
-
-results/retrieval_scores_shift_brightness_blur.json
-
-results/retrieval_scores_adapted_shift_brightness_blur.json
-
-results/retrieval_scores_adapted_int8_shift_brightness_blur.json
-
-
-3. Parse and recompute accuracy from per-frame predictions
-
-For each JSON, the script reads the "examples" list and recomputes:
-
-```Top-1 accuracy```
-
-```Top-5 accuracy```
-
-```Per-phase Top-1 accuracy (phase 1–7)```
-
-Note about metrics:
-
-The recomputed accuracy values may differ slightly from the "top1_accuracy" and "top5_accuracy" written in the JSON header.
-This is expected:
-
-Header values were produced by the original retrieval script using its own evaluation logic.
-
-In reliability analysis, we use only the per-frame predictions stored in "examples" to ensure:
-
-consistent evaluation across all methods
-
-consistent comparison between normal and shifted data
-
-correct per-phase accuracy
-
-This recomputed version is the authoritative metric for robustness analysis.
-
-4. Compare normal vs shifted
-
-Accuracy drop under shift (Top-1 / Top-5)
-
-Per-phase robustness:
-
-acc_shift−acc_normal
-
-Run: ```python scripts/reliability_analysis.py```
-
-
-This will generate:
-
-1. Numeric summary
-
-```results/reliability_summary.csv```
-
-For each method (baseline_fp32, adapter_fp32, adapter_int8) and each condition (normal, shift_brightness_blur), the CSV stores:
-
-Top-1 accuracy
-
-Top-5 accuracy
-
-These are the recomputed, unified metrics used for all robustness analysis.
-
-2. Figures for reporting
-(1) results/figures_reliability/top1_top5_accuracy_bar.png
-
-Bar chart comparing:
-
-Top-1 (normal)
-
-Top-1 (shifted)
-
-Top-5 (normal)
-
-Top-5 (shifted)
-
-across all methods.
-
-(2) results/figures_reliability/phase_accuracy_diff.png
-
-Per-phase robustness plot showing:
-
-(shift - normal) for each phase
-
-Values < 0 → accuracy drop under corruption
-
-Values close to 0 → stable robustness
-
-3. How to interpret these results
-
-This analysis focuses on robustness, not just accuracy.
-
-A model is considered more reliable if:
-
-Its Top-1 / Top-5 accuracy remains high under shift
-
-Its per-phase accuracy drops less
-
-It maintains stable predictions across different visual conditions
-
-```baseline_fp32```
-
-Shows how sensitive the original CLIP image encoder is to illumination and blur changes.
-
-```adapter_fp32```
-
-Typically shows improved robustness because domain adaptation injects surgical-phase–specific structure.
-
-```adapter_int8```
-
-Verifies whether quantization preserves:
-
-phase awareness
-
-robustness to visual changes
-
-If results are close to FP32, it indicates that quantization did not harm model reliability.
-
-These results and figures can be directly incorporated into the “System Reliability Analysis” or “Robustness Evaluation” section of the paper.
-
-
-# 10. Citation
-If this work contributes to your research, please cite the project:
-
-Yueran Cao,
-Domain-Adaptive CLIP for Surgical Video Keyframe–Text Retrieval with
-Inference Acceleration and System Reliability Analysis.
-2025.
-
-# 11. License
-This project is for academic research only.
 Please follow the Cholec80 dataset license terms.
