@@ -86,7 +86,6 @@ This project evaluates:
 It includes a full pipeline—from frame extraction, indexing, retrieval evaluation, visualization, to acceleration and reliability experiments.
 
 # Model Architecture
-<p align="center"> <img src="surgclip_architecture.png" width="100%"> </p>
 
 The system consists of:
 
