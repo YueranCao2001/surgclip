@@ -6,9 +6,9 @@
 ## with INT8 Inference Acceleration, PQ Compression, and Reliability Analysis
 
 # **Paper Reference**  
-This repository accompanies the paper  
+### This repository accompanies the paper  
 # **“SurgClip: Accelerated Domain-Adaptive CLIP for Surgical Keyframe–Text Retrieval”**  
-which introduces a lightweight phase adapter, INT8 inference acceleration, and PQ-based embedding compression for scalable surgical video retrieval.
+### which introduces a lightweight phase adapter, INT8 inference acceleration, and PQ-based embedding compression for scalable surgical video retrieval.
 
 <p align="left">
 
