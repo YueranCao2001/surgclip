@@ -59,7 +59,7 @@
 
 # Paper Reference
 
-This repository accompanies the paper
+This repository is the implementation of the paper
 
 # **“SurgClip: Accelerated Domain-Adaptive CLIP for Surgical Keyframe–Text Retrieval”**
 
