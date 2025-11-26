@@ -5,6 +5,11 @@
 # SurgClip: Domain-Adaptive CLIP for Surgical Video Keyframe–Text Retrieval
 ## with INT8 Inference Acceleration, PQ Compression, and Reliability Analysis
 
+# **Paper Reference**  
+This repository accompanies the paper  
+# **“SurgClip: Accelerated Domain-Adaptive CLIP for Surgical Keyframe–Text Retrieval”**  
+which introduces a lightweight phase adapter, INT8 inference acceleration, and PQ-based embedding compression for scalable surgical video retrieval.
+
 <p align="left">
 
 <!-- Python version -->
@@ -41,8 +46,8 @@
 
 
 # Table of Contents
-- [Introduction](introduction)
-- [Model Architecture](model-architecture)
+- [Introduction](#introduction)
+- [Model Architecture](#model-architecture)
 - [Environment Setup](#1-environment-setup)
 - [Project Structure](#2-project-structure)
 - [Dataset (Cholec80)](#3-dataset-cholec80)
