@@ -87,6 +87,8 @@ It includes a full pipeline—from frame extraction, indexing, retrieval evaluat
 
 # Model Architecture
 
+<p align="center"> <img src="surgclip_architecture.png" width="100%"> </p>
+
 The system consists of:
 
 - **CLIP Image Encoder**
