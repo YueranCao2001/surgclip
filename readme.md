@@ -5,11 +5,6 @@
 # SurgClip: Domain-Adaptive CLIP for Surgical Video Keyframe–Text Retrieval
 ## with INT8 Inference Acceleration, PQ Compression, and Reliability Analysis
 
-# **Paper Reference**  
-This repository accompanies the paper  
-# **“SurgClip: Accelerated Domain-Adaptive CLIP for Surgical Keyframe–Text Retrieval”**  
-which introduces a lightweight phase adapter, INT8 inference acceleration, and PQ-based embedding compression for scalable surgical video retrieval.
-
 <p align="left">
 
 <!-- Python version -->
@@ -46,6 +41,7 @@ which introduces a lightweight phase adapter, INT8 inference acceleration, and P
 
 
 # Table of Contents
+- [Paper Reference](#paper_reference)
 - [Introduction](#introduction)
 - [Model Architecture](#model-architecture)
 - [Environment Setup](#1-environment-setup)
@@ -60,6 +56,14 @@ which introduces a lightweight phase adapter, INT8 inference acceleration, and P
 - [Reliability Under Distribution Shift](#10-reliability-under-distribution-shift)
 - [Citation](#11-citation)
 - [License](#12-license)
+
+# Paper Reference
+
+This repository accompanies the paper
+
+# **“SurgClip: Accelerated Domain-Adaptive CLIP for Surgical Keyframe–Text Retrieval”**
+
+which introduces a lightweight phase adapter, INT8 inference acceleration, and PQ-based embedding compression for scalable surgical video retrieval.
 
 # Introduction
 
@@ -502,7 +506,7 @@ Figures are stored in: ```results/figures_reliability/```
 ```bibtex
 @misc{cao2025surgclip,
   author       = {Yueran Cao},
-  title        = {SurgClip: Accelerated Domain-Adaptive CLIP for Surgical Keyframe–Text Retrieval},
+  title        = {SurgClip: Domain-Adaptive CLIP for Surgical Video Keyframe–Text Retrieval with INT8 Inference Acceleration, PQ Compression, and Reliability Analysis},
   year         = {2025},
   howpublished = {GitHub repository},
   url          = {https://github.com/YueranCao2001/surgclip}
