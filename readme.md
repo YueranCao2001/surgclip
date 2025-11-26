@@ -502,7 +502,7 @@ Figures are stored in: ```results/figures_reliability/```
 ```bibtex
 @misc{cao2025surgclip,
   author       = {Yueran Cao},
-  title        = {SurgClip: Domain-Adaptive CLIP for Surgical Video Keyframe--Text Retrieval with Inference Acceleration and Reliability Analysis},
+  title        = {SurgClip: Accelerated Domain-Adaptive CLIP for Surgical Keyframe–Text Retrieval},
   year         = {2025},
   howpublished = {GitHub repository},
   url          = {https://github.com/YueranCao2001/surgclip}
