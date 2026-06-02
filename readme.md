@@ -505,7 +505,7 @@ Figures are stored in: ```results/figures_reliability/```
 
 If you find this work useful, please cite:
 
-```
+```bibtex
 @inproceedings{cao2026surgclip,
   author    = {Yueran Cao and Jier Zhang and Junheng Fang and Yushan Pan and Nan Xiang},
   title     = {SurgClip: Accelerated Domain-Adaptive CLIP for Surgical Keyframe-Text Retrieval},
