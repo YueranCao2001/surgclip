@@ -503,13 +503,15 @@ Figures are stored in: ```results/figures_reliability/```
 
 # 11. Citation
 
-```bibtex
-@misc{cao2025surgclip,
-  author       = {Yueran Cao},
-  title        = {SurgClip: Domain-Adaptive CLIP for Surgical Video Keyframe–Text Retrieval with INT8 Inference Acceleration, PQ Compression, and Reliability Analysis},
-  year         = {2025},
-  howpublished = {GitHub repository},
-  url          = {https://github.com/YueranCao2001/surgclip}
+If you find this work useful, please cite:
+
+```
+@inproceedings{cao2026surgclip,
+  author    = {Yueran Cao and Jier Zhang and Junheng Fang and Yushan Pan and Nan Xiang},
+  title     = {SurgClip: Accelerated Domain-Adaptive CLIP for Surgical Keyframe-Text Retrieval},
+  booktitle = {Proceedings of the 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD)},
+  year      = {2026},
+  pages     = {1739--1744}
 }
 ```
 
