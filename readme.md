@@ -54,8 +54,9 @@
 - [INT8 Inference Acceleration](#8-int8-inference-acceleration)
 - [Product Quantization (PQ)](#9-product-quantization-pq)
 - [Reliability Under Distribution Shift](#10-reliability-under-distribution-shift)
-- [Citation](#11-citation)
-- [License](#12-license)
+- [Publication](#11-publication)
+- [Citation](#12-citation)
+- [License](#13-license)
 
 # Paper Reference
 
@@ -501,9 +502,19 @@ Evaluate robustness: python ```scripts/reliability_analysis.py```
 
 Figures are stored in: ```results/figures_reliability/```
 
-# 11. Citation
+# 11. Publication
 
-If you find this work useful, please cite:
+Our paper has been published in **CSCWD 2026**.
+
+**SurgClip: Accelerated Domain-Adaptive CLIP for Surgical Keyframe-Text Retrieval**  
+Yueran Cao, Jier Zhang, Junheng Fang, Yushan Pan, and Nan Xiang.  
+*Proceedings of the 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD), 2026*, pp. 1739–1744.
+
+**IEEE Xplore:** https://ieeexplore.ieee.org/document/11582803
+
+# 12. Citation
+
+If you find this repository useful, please cite:
 
 ```bibtex
 @inproceedings{cao2026surgclip,
@@ -511,11 +522,12 @@ If you find this work useful, please cite:
   title     = {SurgClip: Accelerated Domain-Adaptive CLIP for Surgical Keyframe-Text Retrieval},
   booktitle = {Proceedings of the 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD)},
   year      = {2026},
-  pages     = {1739--1744}
+  pages     = {1739--1744},
+  url       = {https://ieeexplore.ieee.org/document/11582803}
 }
 ```
 
-# 12. License
+# 13. License
 
 This project is for **academic research only**.
 
